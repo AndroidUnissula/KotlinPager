@@ -7,9 +7,14 @@ class MyPagerAdapter(fragmentManager: androidx.fragment.app.FragmentManager): Fr
 
     // sebuah list yang menampung objek Fragment
     private val pages = listOf(
+        SampulFragment(),
         SatuFragment(),
         DuaFragment(),
-        TigaFragment()
+        TigaFragment(),
+        EmpatFragment(),
+        LimaFragment(),
+        EnamFragment(),
+        TujuhFragment()
     )
 
     override fun getItem(position: Int): Fragment {
@@ -20,13 +25,5 @@ class MyPagerAdapter(fragmentManager: androidx.fragment.app.FragmentManager): Fr
         return pages.size
     }
 
-    // judul untuk tabs
-    override fun getPageTitle(position: Int): CharSequence? {
-        return when (position) {
-            0 -> "First Tab"
-            1 -> "Second Tab"
-            else -> "Third Tab"
-        }
-    }
 }
 
